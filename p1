@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+FILE *salida;
+int num;
+void traducir(char c)
+
+
+int main(int argc, char *argv[]) {
+	return 0;
+}
+
+void traducir(char c){
+	if(isalpha(c)){
+		fprintf(salida, "LD %c\n", c);
+		fprintf(salida, "ST #%d\n", num++);
+	}else(c=='+'){
+		fprintf(salida, "LD #%d\n", num-1);
+		fprintf(salida, "ADD #%d\n", num);
+		fprintf(salida, "ST #%d\n", num-1);
+	}else(c=='+'){
+		fprintf(salida, "LD #%d\n", num-1);
+		fprintf(salida, "NEG #%d\n", num);
+		fprintf(salida, "ST #%d\n", num-1);
+	}else(c=='+'){
+		fprintf(salida, "LD #%d\n", num-1);
+		fprintf(salida, "ADD #%d\n", num);
+		fprintf(salida, "ST #%d\n", num-1);				
+	}
+}
+
